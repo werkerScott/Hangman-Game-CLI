@@ -39,6 +39,7 @@ Word.prototype.renderCurrentWord = function() {
         // console.log(letter.displayVal)
         letterArrDisplay.push(letter.displayVal)
     })
+    // turn array of displayVal into string to print to screen
     console.log(letterArrDisplay.join('') + "\n\n");
     // i think need to empty it each time
     letterArrDisplay =[];

@@ -16,7 +16,7 @@ var app = {
 	    guessCount = 10;
 	    areBlanks = true;
 	    console.log(currentWord);
-		app.statusDisplay.start();
+		app.statusDisplay.active();
 	    currentWord.renderCurrentWord();
 	    app.guessLetter();
 	},
@@ -29,34 +29,54 @@ var app = {
 	        message: "Guess letter",
 	        name: "guessedLetter"
 	    }]).then(function(answers) {
-
+	    	// passes letter to functions that check to see if match
+	    	// updates object if matches
+	    	// prints to screen
 	    	currentWord.onGuess(answers.guessedLetter);
-	    	app.evaluateStatus(currentWord);
-
+	    	// pass current object state to evalatuation handler
+	    	app.evalStatus(currentWord);
 		})
 	},
 
-	evaluateStatus: function (currentWord) {
-		console.log(currentWord);
-		console.log("I fired");
-		console.log(currentWord.letters[0]);
-		console.log(currentWord.letters[1]);
-		console.log(currentWord.letters[1].displayVal);
-
-		var tester =[];
-		currentWord.letters.displayVal.forEach(function(a) {
-        	tester.a.push()
-    	});
-    	console.log(tester);
-
-
-
-		// if (currentWord.indexOf("_ ") === -1) {
-		// 	console.log("continue");
-		// }
-
-
+	askEndGame: function () {
+		// prompt for yes no
+		// if yes
+			// then new game
+		// if no
+			// return
 	},
+
+// MAIN LOGIC HERE
+	evalStatus: function (currentWord) {
+		console.log(currentWord);
+		// console.log(currentWord.letters[0]);
+		// console.log(currentWord.letters[1]);
+		// console.log(currentWord.letters[1].displayVal);
+
+		// GUESSES CHECK
+		// remove one from counter
+
+		// if guessCount = 0
+			// print you lost
+			// then run askEndGame
+		// otherwise just continue on
+
+
+		// var evalBlanks = function result
+			// if evalBlanks is true (there is one)
+				// then somehow get back to guessLetter and getNewGuess
+			// "else" evalBlanks is false (all filled in)
+				// then print you won
+				// then run askEndGame
+		return
+	},
+
+	evalBlanks: function () {
+		// loop through for blanks
+		// return true as soon as one is found
+		// if none are found, return false
+	},
+
 
 	udpateDisplay: function () {
 		app.statusDisplay.active();
