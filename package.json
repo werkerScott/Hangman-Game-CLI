@@ -1,0 +1,24 @@
+{
+  "name": "hangman-game-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "game2.js",
+  "dependencies": {
+    "inquirer": "^4.0.1",
+    "random-word": "^2.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/werkerScott/Hangman-Game-CLI.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/werkerScott/Hangman-Game-CLI/issues"
+  },
+  "homepage": "https://github.com/werkerScott/Hangman-Game-CLI#readme"
+}
